@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="0" type="collection">
+        <element default="001" label="New_Field1" mandatory="true" max_length="3" name="new_field1" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Legal" label="Request type" max_length="40" name="u_choice_6" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="-TBDVALUE-Operations" sequence="0"/>
+                <element inactive_on_update="false" label="Human Resource" sequence="0" value="HR"/>
+                <element inactive_on_update="false" label="Finance" sequence="1" value="Finance"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="Legal"/>
+                <element inactive_on_update="false" label="Information Technology" sequence="3" value="I.T"/>
+                <element inactive_on_update="false" label="Others" sequence="4" value="Others"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="LEGAL 001" label="What needed" mandatory="true" max_length="40" name="u_choice_8" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Reso 1" sequence="0" value="HR 001"/>
+                <element inactive_on_update="false" label="Human Reso 2" sequence="1" value="HR 002"/>
+                <element inactive_on_update="false" label="Finance 1" sequence="2" value="FIN 001"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="3" value="LEGAL 001"/>
+                <element inactive_on_update="false" label="Finance 2" sequence="4" value="FIN 002"/>
+                <element inactive_on_update="false" label="I.T 1" sequence="5" value="IT 001"/>
+                <element inactive_on_update="false" label="I.T 2" sequence="6" value="IT 002"/>
+                <element inactive_on_update="false" label="Others 1" sequence="7" value="Others 001"/>
+            </choice>
+        </element>
+        <element label="Attachments" max_length="40" name="u_file_attachment_1" type="file_attachment"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_glide_date_time_4" type="glide_date_time"/>
+        <element label="New Duration" max_length="40" name="u_glide_duration_2" type="glide_duration"/>
+        <element label="UTC Time" mandatory="true" max_length="40" name="u_glide_utc_time_3" type="glide_utc_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_5" reference="sys_user" type="reference"/>
+    </element>
+</database>
